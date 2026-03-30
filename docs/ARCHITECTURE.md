@@ -23,12 +23,15 @@ This document explains how the project is organized.
 
 ## src/
 
-Contains all game code.
+Contains all game code. Whici is split between my personal 2D game development library, called CoffeeLib and the game itself, called Coffee-Machine Interface, CMF for short.
 
-- core/ → Main systems (game loop, scene manager)
-- systems/ → Dialogue, coffee machine, choices
-- ui/ → UI logic and components
-- data/ → Data loaders
+### CoffeeLib (2D Game Library)
+
+
+
+### Coffee-Machine Interface
+
+
 
 ---
 
