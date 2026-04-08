@@ -1,24 +1,25 @@
 package com.normanwhittlecliff.coffeeLib.core;
 
 import com.normanwhittlecliff.cmi.game.Game;
+import com.normanwhittlecliff.coffeeLib.util.Debug;
 
 public class GameLoop implements Runnable {
 	
-	private Game game;
+	private GameCore game;
 	private Thread gameThread;
 	
 	private boolean running = false;
 	
-	public GameLoop(Game game) {
+	public GameLoop(GameCore game) {
+		Debug.println("GameLoop > INITIALIZING....");
 		this.game = game;
-		
 	}
 	
 	public void start() {
+		Debug.println("GameLoop > STARTING....");
 		gameThread = new Thread(this);
 		running = true;
 		gameThread.start();
-		
 	}
 	
 	// GAME LOOP
@@ -78,9 +79,12 @@ public class GameLoop implements Runnable {
 	        }
 
 	        // Debug output
-	        if (System.currentTimeMillis() - lastCheck >= 1000) {
+	        if (Debug.debugMode && System.currentTimeMillis() - lastCheck >= 1000) {
 	            lastCheck += 1000;
 	            //System.out.println("FPS: " + frames + " | UPS: " + updates);
+	            game.getGameWindow().setTitle(game.getGameConfig().getWindowTitle() 
+	            		+ " | UPS: " + updates
+	            		+ " | FPS: " + frames);
 	            frames = 0;
 	            updates = 0;
 	        }

@@ -11,14 +11,14 @@ import com.normanwhittlecliff.coffeeLib.input.Input;
 
 public class GamePanel extends JPanel{
 	
-	private Game game;
+	private GameCore game;
 	private Input input;
 	
 	private int frames;
 	
-	public GamePanel(Game game) {
-		this.game = game;
-		this.setPreferredSize(new Dimension(game.getGameConfig().getWidth(), game.getGameConfig().getHeight()));
+	public GamePanel(GameCore gameCore) {
+		this.game = gameCore;
+		this.setPreferredSize(new Dimension(gameCore.getGameConfig().getWidth(), gameCore.getGameConfig().getHeight()));
 	}
 	
 	public void paintComponent(Graphics g) {

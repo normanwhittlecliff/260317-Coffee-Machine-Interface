@@ -1,11 +1,13 @@
 package com.normanwhittlecliff.coffeeLib.core;
 
+import com.normanwhittlecliff.coffeeLib.util.Debug;
+
 public class GameConfig {
-	// =================================================================================================================
+	// =========================
 	private String title;
-	// =================================================================================================================
+	// =========================
 	private Version version;
-	// =================================================================================================================
+	// =========================
 	private boolean windowRezisable = false;
 	private float scale;
 	private int baseWidth;  // 640;
@@ -16,15 +18,27 @@ public class GameConfig {
 	private int targetFPS = 60;
 	private int targetUPS = 60;
 	
+	
+	public GameConfig() {
+		Debug.println("GameConfig > INITIALIZING...");
+	}
+	
 	public void calculateSize() {
 		this.width  = (int) (baseWidth * scale);
 		this.height = (int) (baseHeight * scale);
 		
-		System.out.println("> GameConfig: Width = " + width);
-		System.out.println("> GameConfig: Height = " + height);
+		Debug.println("GameConfig > Width = " + width);
+		Debug.println("GameConfig > Height = " + height);
 	}
-	// =================================================================================================================
+	
+	public String getWindowTitle() {
+		return this.getTitle() + " (v" + this.getVersion() + ")";
+	}
+	
+	// =========================
 	// GETTERS & SETTERS
+	// =========================
+	
 	public String getTitle() {return title;}
 	public void setTitle(String title) {this.title = title;}
 	

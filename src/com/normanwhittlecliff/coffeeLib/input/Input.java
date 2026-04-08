@@ -4,6 +4,8 @@ import java.awt.event.*;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.normanwhittlecliff.coffeeLib.util.Debug;
+
 public class Input implements KeyListener, MouseListener, MouseMotionListener {
 
     private static final Set<Integer> keysDown = new HashSet<>();
@@ -17,6 +19,10 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener {
     private static int mouseX;
     private static int mouseY;
 
+    public Input() {
+    	Debug.println("Input > INITIALIZING...");
+    }
+    
     // =========================
     // Keyboard Events
     // =========================
@@ -84,7 +90,15 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener {
     // =========================
     // Query Methods (IMPORTANT)
     // =========================
-
+    
+    /**
+     * A method to detect if a key was pressed
+     * @return true if any key is pressed. False, otherwise.
+     */
+    public static boolean isKeyPressed() {
+        return (!keysPressed.isEmpty());
+    }
+    
     public static boolean isKeyDown(int keyCode) {
         return keysDown.contains(keyCode);
     }

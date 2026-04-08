@@ -35,6 +35,24 @@ I started code and created just a windows. my focus was the GameConfig class and
 
 I created the GameLoop and started working on a Input class.
 
+# Mar 30, 2026 - Implementing the Input class
+
+I was able to implement the Input class I created yesterday with my code. It is working much better than I was expecting. 
+
+All I need is separated the "if" statements for keyboards and mouse some functions and play them according to scenes. 
+
+Thus, when a scene is on screen, the code can automatically update the inputs given. I might do a keyboard map later for easy coding, but also so the user can change what keys do the job.
+
+# Apr 02, 2026 - Game States
+
+After some much needed rest, I am working on this project again. Now I want to add the game states. There is no point on focousing on player, inventory, momevent and stuff like that since this game is going to mainly be focous on clicking and reading.
+
+OI want to set the game states in my engine so I can create them in the game. The main menu, the loading, the settings and the "gameplay" oner. i still need to decided if the phone and coffee-machine will be there own state or a oversscreen thingy.
+
+# Apr 05, 2026 - Game States (Finished)
+
+I finished adding game states. For now, i have decided that each state will be deleted when changed to another. I also made the intro software, main menu and the testing. I assume the gameplay one will be the biggest, and, because of the nature of my states, i will havce to make the Coffee_Machine state be a UI Overlook
+
 
 # PERSONAL (delete later)
 
