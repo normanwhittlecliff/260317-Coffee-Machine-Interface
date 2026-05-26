@@ -1,6 +1,6 @@
 <!-- 260317 Coffee-Machine Interface — README -->
 
-# Coffe-Machine Interface
+# Coffee-Machine Interface
 
 A Click-based story telling Java game I developed in college for the subject Human-Machine Interface (Interface Homem Máquina, or IHM).
 
