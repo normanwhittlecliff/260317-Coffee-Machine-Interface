@@ -2,7 +2,7 @@
 
 # Coffee-Machine Interface
 
-A Click-based story telling Java game I developed in college for the subject Human-Machine Interface (Interface Homem Máquina, or IHM).
+A Click-based story telling Java game I developed in college for the subject Human-Machine Interface (Interface Homem Máquina, or IHM). THis is the main branch
 
 ---
 
